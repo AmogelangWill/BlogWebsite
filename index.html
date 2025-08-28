@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- Swezzy Media - Minimal news-first landing page (index.html) -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swezzy Media</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="light"> <!-- default to light mode; JS will handle toggling -->
+  <!-- Top navigation -->
+  <header class="topbar">
+    <button id="hamburger" aria-label="Open popular news" class="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu">
+      <a href="index.html" class="logo">Swezzy Media</a>
+      <ul class="menu-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="lifestyle.html">LifeStyle</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="contact.html">Get in touch</a></li>
+      </ul>
+    </nav>
+
+    <div class="top-actions">
+      <!-- Social icons - replace href values with your actual account URLs -->
+      <a class="social" href="#" data-name="twitter" title="Twitter" aria-label="Twitter">T</a>
+      <a class="social" href="#" data-name="instagram" title="Instagram" aria-label="Instagram">I</a>
+      <a class="social" href="#" data-name="facebook" title="Facebook" aria-label="Facebook">F</a>
+
+      <!-- Theme toggle -->
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+    </div>
+  </header>
+
+  <!-- Popular news panel (shown when hamburger clicked) -->
+  <aside id="popularPanel" class="popular-panel hidden" aria-hidden="true">
+    <h3>Popular</h3>
+    <ul id="popularList">
+      <!-- JS will inject popular items -->
+    </ul>
+  </aside>
+
+  <!-- Main landing: full-screen current news -->
+  <main>
+    <section class="hero-news" id="hero">
+      <!-- Star of the show: large article at center -->
+      <article class="featured" id="featuredArticle">
+        <div class="featured-text">
+          <h1 class="featured-title">Breaking: Swezzy Media launches — minimal, bold, and green.</h1>
+          <p class="lede">A lightweight experimental news-first layout that makes the current story the star of the show.</p>
+          <a href="#" class="readmore">Read full story →</a>
+        </div>
+        <div class="featured-meta">
+          <time datetime="2025-08-28">Aug 28, 2025</time>
+          <span class="tag">News</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Recent posts: unique collage (not grid) -->
+    <section class="recent" id="recent">
+      <h2>Recent Posts</h2>
+      <div class="collage" id="collage">
+        <!-- JS will populate unique collage cards -->
+      </div>
+      <div class="view-all">
+        <a href="index.html">View more posts</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© Swezzy Media — crafted with white, black &amp; #009B3B</small>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
